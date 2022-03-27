@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "52a6eb68-7ac3-4e52-9fa9-56a2a6c0cc94",
+		"name": "Auth service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\" : \"tamara\",\r\n    \"password\" : \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Protected data",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoidGFtYXJhIiwiaWF0IjoxNjQ4MzAwMjI1LCJleHAiOjE2NDgzMDc0MjV9.IPSn-yiJguX7T0hoHrYejdzF5WbFyI16Y2uvcOLq7a0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/protected_data",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"protected_data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\" : \"usuario_a_crear\",\r\n    \"password\" : \"password_a_añadir\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

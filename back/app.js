@@ -49,7 +49,7 @@ const verifyToken = (req, res, next) => {
 
 
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+    res.send({msg:'Hello World!'})
 })
 
 app.get('/protected_data',verifyToken,(req,res) => {
